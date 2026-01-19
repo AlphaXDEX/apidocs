@@ -227,8 +227,8 @@ commit+push() {
   #--quiet is important here to avoid outputting the repo URL, which may contain a secret token
   if [ $GH_TOKEN ]; then
     # deploy by Travis CI
-    # add github token
-    repo="https://"$GH_TOKEN"@github.com/huobiapi/docs.git"
+    # add github tokens
+    repo="https://"$GH_TOKEN"@github.com/AlphaXDEX/apidocs.git"
     git remote add origin-pages $repo
     git push --quiet origin-pages $deploy_branch
   else
