@@ -5,7 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - shell
 
 toc_footers:
-  - <a href='https://www.toobit.com'>TooBit</a>
+  - <a href='https://www.alphax.com'>AlphaX</a>
 includes:
 
 search: true
@@ -20,7 +20,7 @@ search: true
 
 ## API Key Setup
 
-- Some endpoints will require an API Key. Please refer to<a href='https://www.toobit.com/support/toobit-api-key-creation-guide'> this page </a> regarding API key creation.
+- Some endpoints will require an API Key. Please refer to<a href='https://www.alphax.com'> this page </a> regarding API key creation.
 - Once API key is created, it is recommended to set IP restrictions on the key for security reasons.
 - **Never share your API key/secret key to ANYONE.**
 
@@ -42,8 +42,8 @@ A `SPOT` account is provided by default upon creation of a Account.
 
 ## General API Information
 
-- some endpoints will require an API Key. Please refer to<a href='https://www.toobit.com/support/toobit-api-key-creation-guide'>this page</a>
-- The base endpoint is: **https://api.toobit.com**
+- some endpoints will require an API Key. Please refer to<a href='https://www.alphax.com'>this page</a>
+- The base endpoint is: **https://api.alphax.com**
 - All endpoints return either a JSON object or array.
 - All time and timestamp related fields are in milliseconds.
 ### HTTP  Return Codes
@@ -51,7 +51,7 @@ A `SPOT` account is provided by default upon creation of a Account.
 - HTTP `4XX` return codes are used for malformed requests; the issue is on the sender's side.
 - HTTP `403` return code is used when the WAF Limit (Web Application Firewall) has been violated.
 - HTTP `429` return code is used when breaking a request rate limit.
-- HTTP `5XX` return codes are used for internal errors; the issue is on TooBit's side. It is important to NOT treat this as a failure operation; the execution status is UNKNOWN and could have been a success.
+- HTTP `5XX` return codes are used for internal errors; the issue is on AlphaX's side. It is important to NOT treat this as a failure operation; the execution status is UNKNOWN and could have been a success.
 
 ### General Information on Endpoints
 
@@ -162,7 +162,7 @@ $ echo -n "symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=
 ``` bash
 curl command:
 (HMAC SHA256)
-$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.toobit.com/api/v1/spot/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
+$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.alphax.com/api/v1/spot/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
 
 ```
 - **queryString**
@@ -189,7 +189,7 @@ $ echo -n "symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=
 ``` bash
 curl command:
 (HMAC SHA256)
-$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.toobit.com/api/v1/spot/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
+$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.alphax.com/api/v1/spot/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
 ```
 - **requestBody**
   symbol=BTCUSDT <br>
@@ -218,7 +218,7 @@ $ echo -n "symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTCquantity=1&price=4
 ``` bash
 curl command:
 (HMAC SHA256)
-$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.toobit.com/api/v1/spot/order?symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC' -d 'quantity=1&price=400&recvWindow=10000000&timestamp=1668481902307&signature=59ef0b2085ebb99cca5b6445c202d99add17be2d5d1861c0f4aa17bc785ac4d5'
+$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.alphax.com/api/v1/spot/order?symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC' -d 'quantity=1&price=400&recvWindow=10000000&timestamp=1668481902307&signature=59ef0b2085ebb99cca5b6445c202d99add17be2d5d1861c0f4aa17bc785ac4d5'
 
 ```
 
@@ -1229,7 +1229,7 @@ Best price/qty on the order book for a symbol or symbols.
 
 # Websocket Market Streams
 
-- The base endpoint is: wss://stream.toobit.com
+- The base endpoint is: wss://stream.alphax.com
 - The URL format for direct access is:  wss://#HOST/quote/ws/v1
 
 | Name     | value      | 
@@ -1715,7 +1715,7 @@ curl  -H "Content-Type:application/json" -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm3
       "type": "LIMIT",     
       "price": 17002,     
       "quantity": 1  
- } ]' 'https://api.toobit.com/api/v1/spot/batchOrders?timestamp=1671880913657&signature=7548b6834613afed3b7d3b0b9bfb0e0b3e3799c46db3ea6b952439fde35cb88f'
+ } ]' 'https://api.alphax.com/api/v1/spot/batchOrders?timestamp=1671880913657&signature=7548b6834613afed3b7d3b0b9bfb0e0b3e3799c46db3ea6b952439fde35cb88f'
 
 ```
 
@@ -2275,12 +2275,12 @@ accountType：
 
 # User Data Streams
 
-- The base API endpoint is : **https://api.toobit.com** 
+- The base API endpoint is : **https://api.alphax.com** 
 - A User Data Stream  `listenKey` is valid for 60 minutes after creation.
 - Doing a  `PUT` on a `listenKey` will extend its validity for 60 minutes.
 - Doing a `DELETE` on a `listenKey` will close the stream and invalidate the `listenKey` .
 - Doing a `POST` on an account with an active `listenKey` will return the currently active `listenKey `and extend its validity for 60 minutes.
-- The base websocket endpoint is: **wss://stream.toobit.com**
+- The base websocket endpoint is: **wss://stream.alphax.com**
 - User feeds are accessible via `/api/v1/ws/<listenKey>` (e.g. `wss://#HOST/api/v1/ws/<listenKey>`)
 - Each link is valid for no more than 24 hours, please properly handle disconnection and reconnection.
 - User feed payloads are not guaranteed to be up during busy times; make sure to order updates with `E`
