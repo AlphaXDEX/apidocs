@@ -647,8 +647,8 @@
       <h2 id='general-api-information'>General API Information</h2>
       <ul>
         <li>Some endpoints will require an API Key. Please refer to <a
-            href='https://www.toobit.com/support/toobit-api-key-creation-guide'>this page</a></li>
-        <li>The base endpoint is: <strong>https://api.toobit.com</strong></li>
+            href='https://www.alphax.com'>this page</a></li>
+        <li>The base endpoint is: <strong>https://api.alphax.com</strong></li>
         <li>All endpoints return either a JSON object or array.</li>
         <li>All time and timestamp related fields are in milliseconds.</li>
         <li>All data types adopt definition in JAVA.</li>
@@ -673,7 +673,7 @@
       </ul>
       <h2 id='websocket-information'>Websocket Information</h2>
       <ul>
-        <li>Base Url: <strong>wss://stream.toobit.com</strong></li>
+        <li>Base Url: <strong>wss://stream.alphax.com</strong></li>
       </ul>
       <h2 id='limits'>LIMITS</h2>
       <ul>
@@ -838,7 +838,7 @@ HMAC SHA256 signature:
       <div class="highlight">
         <pre class="highlight shell"><code>curl <span class="nb">command</span>:
 <span class="o">(</span>HMAC SHA256<span class="o">)</span>
-<span class="nv">$ </span>curl <span class="nt">-H</span> <span class="s2">"X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq"</span> <span class="nt">-X</span> POST <span class="s1">'https://api.toobit.com/api/v1/futures/order'</span> <span class="nt">-d</span> <span class="s1">'symbol=BTCUSDT&amp;side=SELL&amp;type=LIMIT&amp;timeInForce=GTC&amp;quantity=1&amp;price=400&amp;recvWindow=100000&amp;timestamp=1668481902307&amp;signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'</span>
+<span class="nv">$ </span>curl <span class="nt">-H</span> <span class="s2">"X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq"</span> <span class="nt">-X</span> POST <span class="s1">'https://api.alphax.com/api/v1/futures/order'</span> <span class="nt">-d</span> <span class="s1">'symbol=BTCUSDT&amp;side=SELL&amp;type=LIMIT&amp;timeInForce=GTC&amp;quantity=1&amp;price=400&amp;recvWindow=100000&amp;timestamp=1668481902307&amp;signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'</span>
 
 </code></pre>
       </div>
@@ -864,7 +864,7 @@ HMAC SHA256 signature:
       <div class="highlight">
         <pre class="highlight shell"><code>curl <span class="nb">command</span>:
 <span class="o">(</span>HMAC SHA256<span class="o">)</span>
-<span class="nv">$ </span>curl <span class="nt">-H</span> <span class="s2">"X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq"</span> <span class="nt">-X</span> POST <span class="s1">'https://api.toobit.com/api/v1/spot/order'</span> <span class="nt">-d</span> <span class="s1">'symbol=BTCUSDT&amp;side=SELL&amp;type=LIMIT&amp;timeInForce=GTC&amp;quantity=1&amp;price=400&amp;recvWindow=100000&amp;timestamp=1668481902307&amp;signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'</span>
+<span class="nv">$ </span>curl <span class="nt">-H</span> <span class="s2">"X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq"</span> <span class="nt">-X</span> POST <span class="s1">'https://api.alphax.com/api/v1/spot/order'</span> <span class="nt">-d</span> <span class="s1">'symbol=BTCUSDT&amp;side=SELL&amp;type=LIMIT&amp;timeInForce=GTC&amp;quantity=1&amp;price=400&amp;recvWindow=100000&amp;timestamp=1668481902307&amp;signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'</span>
 </code></pre>
       </div>
       <ul>
@@ -893,7 +893,7 @@ HMAC SHA256 signature:
       <div class="highlight">
         <pre class="highlight shell"><code>curl <span class="nb">command</span>:
 <span class="o">(</span>HMAC SHA256<span class="o">)</span>
-<span class="nv">$ </span>curl <span class="nt">-H</span> <span class="s2">"X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq"</span> <span class="nt">-X</span> POST <span class="s1">'https://api.toobit.com/api/v1/spot/order?symbol=BTCUSDT&amp;side=SELL&amp;type=LIMIT&amp;timeInForce=GTC'</span> <span class="nt">-d</span> <span class="s1">'quantity=1&amp;price=400&amp;recvWindow=10000000&amp;timestamp=1668481902307&amp;signature=59ef0b2085ebb99cca5b6445c202d99add17be2d5d1861c0f4aa17bc785ac4d5'</span>
+<span class="nv">$ </span>curl <span class="nt">-H</span> <span class="s2">"X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq"</span> <span class="nt">-X</span> POST <span class="s1">'https://api.alphax.com/api/v1/spot/order?symbol=BTCUSDT&amp;side=SELL&amp;type=LIMIT&amp;timeInForce=GTC'</span> <span class="nt">-d</span> <span class="s1">'quantity=1&amp;price=400&amp;recvWindow=10000000&amp;timestamp=1668481902307&amp;signature=59ef0b2085ebb99cca5b6445c202d99add17be2d5d1861c0f4aa17bc785ac4d5'</span>
 
 </code></pre>
       </div>
@@ -2302,7 +2302,7 @@ HMAC SHA256 signature:
       </ul>
       <h1 id='websocket-market-streams'>Websocket Market Streams</h1>
       <ul>
-        <li>The base endpoint is: wss://stream.toobit.com</li>
+        <li>The base endpoint is: wss://stream.alphax.com</li>
         <li>The URL format for direct access is: wss://#HOST/quote/ws/v1</li>
       </ul>
       <h2 id='live-subscribing-unsubscribing-to-streams'>Live Subscribing/Unsubscribing to streams</h2>
@@ -4823,13 +4823,13 @@ HMAC SHA256 signature:
       </table>
       <h1 id='user-data-streams'>User Data Streams</h1>
       <ul>
-        <li>The base API endpoint is : <strong>https://api.toobit.com</strong></li>
+        <li>The base API endpoint is : <strong>https://api.alphax.com</strong></li>
         <li>A User Data Stream <code>listenKey</code> is valid for 60 minutes after creation.</li>
         <li>Doing a PUT on a <code>listenKey</code> will extend its validity for 60 minutes.</li>
         <li>Doing a DELETE on a <code>listenKey</code> will close the stream and invalidate the listenKey .</li>
         <li>Doing a POST on an account with an active <code>listenKey</code> will return the currently active
           <code>listenKey</code> and extend its validity for 60 minutes.</li>
-        <li>The base websocket endpoint is: <strong>wss://stream.toobit.com</strong></li>
+        <li>The base websocket endpoint is: <strong>wss://stream.alphax.com</strong></li>
         <li>User feeds are accessible via <code>/api/v1/ws/&lt;listenKey&gt;</code> (e.g.
           <code>wss://#HOST/api/v1/ws/&lt;listenKey&gt;</code>)</li>
         <li>Each link is valid for no more than 24 hours, please properly handle disconnection and reconnection.</li>
