@@ -5,7 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - shell
 
 toc_footers:
-  - <a href='https://www.toobit.com'>TooBit</a>
+  - <a href='https://www.alphax.com'>AlphaX</a>
 includes:
 
 search: true
@@ -20,7 +20,7 @@ search: true
 
 ## API Key 设置
 
-- 很多接口需要API Key才可以访问. 请参考<a href='https://www.toobit.com/support/toobit-api-key-creation-guide'>这个页面</a>来设置API Key.
+- 很多接口需要API Key才可以访问. 请参考<a href='https://www.alphax.com'>这个页面</a>来设置API Key.
 - 设置API Key的同时，为了安全，建议设置IP访问白名单.
 - **永远不要把你的API key/secret告诉给任何人**
 
@@ -42,8 +42,8 @@ search: true
 
 ## API 基本信息
 
-- 接口可能需要用户的 API Key，如何创建API-KEY请参考<a href='https://www.toobit.com/support/toobit-api-key-creation-guide'>这里</a>
-- 本篇列出接口的baseurl: https://api.toobit.com
+- 接口可能需要用户的 API Key，如何创建API-KEY请参考<a href='https://www.alphax.com'>这里</a>
+- 本篇列出接口的baseurl: https://api.alphax.com
 - 所有接口的响应都是 JSON 格式。
 - 所有时间、时间戳均为UNIX时间，单位为毫秒。
 ### HTTP 返回代码
@@ -123,7 +123,7 @@ if (timestamp < (serverTime + 1000) && (serverTime - timestamp) <= recvWindow) {
 }
 ```
 
-**关于交易时效性** 互联网状况并不100%可靠，不可完全依赖,因此你的程序本地到TooBit服务器的时延会有抖动. 这是我们设置recvWindow的目的所在，如果你从事高频交易，对交易时效性有较高的要求，可以灵活设置recvWindow以达到你的要求。
+**关于交易时效性** 互联网状况并不100%可靠，不可完全依赖,因此你的程序本地到AlphaX服务器的时延会有抖动. 这是我们设置recvWindow的目的所在，如果你从事高频交易，对交易时效性有较高的要求，可以灵活设置recvWindow以达到你的要求。
 <aside class="notice">
 不推荐使用5秒以上的recvWindow
 </aside>
@@ -158,7 +158,7 @@ $ echo -n "symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=
 ``` bash
 curl 调用:
 (HMAC SHA256)
-$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.toobit.com/api/v1/spot/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
+$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.alphax.com/api/v1/spot/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
 
 ```
 - **queryString**
@@ -185,7 +185,7 @@ $ echo -n "symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=
 ``` bash
 curl 调用:
 (HMAC SHA256)
-$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.toobit.com/api/v1/spot/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
+$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.alphax.com/api/v1/spot/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
 ```
 - **requestBody**
   symbol=BTCUSDT <br>
@@ -214,7 +214,7 @@ $ echo -n "symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTCquantity=1&price=4
 ``` bash
 curl 调用:
 (HMAC SHA256)
-$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.toobit.com/api/v1/spot/order?symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC' -d 'quantity=1&price=400&recvWindow=10000000&timestamp=1668481902307&signature=59ef0b2085ebb99cca5b6445c202d99add17be2d5d1861c0f4aa17bc785ac4d5'
+$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.alphax.com/api/v1/spot/order?symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC' -d 'quantity=1&price=400&recvWindow=10000000&timestamp=1668481902307&signature=59ef0b2085ebb99cca5b6445c202d99add17be2d5d1861c0f4aa17bc785ac4d5'
 
 ```
 
@@ -1220,7 +1220,7 @@ NONE
 
 # Websocket 行情推送
 
-- 本篇所列出的所有wss接口的baseurl为: wss://stream.toobit.com
+- 本篇所列出的所有wss接口的baseurl为: wss://stream.alphax.com
 - 直接访问时URL格式为  wss://#HOST/quote/ws/v1
 
 | 名称     | 值      | 
@@ -1704,7 +1704,7 @@ curl  -H "Content-Type:application/json" -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm3
       "type": "LIMIT",     
       "price": 17002,     
       "quantity": 1  
- } ]' 'https://api.toobit.com/api/v1/spot/batchOrders?timestamp=1671880913657&signature=7548b6834613afed3b7d3b0b9bfb0e0b3e3799c46db3ea6b952439fde35cb88f'
+ } ]' 'https://api.alphax.com/api/v1/spot/batchOrders?timestamp=1671880913657&signature=7548b6834613afed3b7d3b0b9bfb0e0b3e3799c46db3ea6b952439fde35cb88f'
 
 ```
 
@@ -2251,12 +2251,12 @@ accountType：
 
 # Websocket账户信息推送
 
-- 本篇所列出API接口的base url :  **https://api.toobit.com**
+- 本篇所列出API接口的base url :  **https://api.alphax.com**
 - 用于订阅账户数据的 `listenKey` 从创建时刻起有效期为60分钟
 - 可以通过 PUT 一个 `listenKey` 延长60分钟有效期
 - 可以通过DELETE一个 `listenKey` 立即关闭当前数据流，并使该`listenKey` 无效
 - 在具有有效listenKey的帐户上执行`POST`将返回当前有效的`listenKey`并将其有效期延长60分钟
-- websocket接口的baseurl: **wss://stream.toobit.com**
+- websocket接口的baseurl: **wss://stream.alphax.com**
 - 用户信息流可通过 `/api/v1/ws/<listenKey>`访问   (例如`wss://#HOST/api/v1/ws/<listenKey>`)
 - 每个链接有效期不超过24小时，请妥善处理断线重连。
 - 用户信息流有效负载不保证在繁忙时段处于正常状态；确保使用E订购更新
