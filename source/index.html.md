@@ -5,7 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - shell
 
 toc_footers:
-  - <a href='https://www.toobit.com'>TooBit </a>
+  - <a href='https://www.alphax.com'>AlphaX</a>
 includes:
 
 search: true
@@ -21,8 +21,8 @@ search: true
 
 ## Rest 基本信息
 
-- 接口可能需要用户的 API Key，如何创建API-KEY请参考<a href='https://www.toobit.com/support/toobit-api-key-creation-guide'>这里</a>
-- 本篇列出REST接口的baseurl **https://api.toobit.com**
+- 接口可能需要用户的 API Key，如何创建API-KEY请参考<a href='https://www.alphax.com'>这里</a>
+- 本篇列出REST接口的baseurl **https://api.alphax.com**
 - 所有接口的响应都是JSON格式
 - 所有时间、时间戳均为UNIX时间，单位为毫秒
 - 所有数据类型采用JAVA的数据类型定义
@@ -35,7 +35,7 @@ search: true
 
 
 ## Websocket 基本信息
-- Base Url: **wss://stream.toobit.com**
+- Base Url: **wss://stream.alphax.com**
 
 
 ## 访问限制
@@ -78,7 +78,7 @@ if (timestamp < (serverTime + 1000) && (serverTime - timestamp) <= recvWindow) {
 }
 ```
 
-**关于交易时效性** 互联网状况并不100%可靠，不可完全依赖,因此你的程序本地到TooBit服务器的时延会有抖动. 这是我们设置recvWindow的目的所在，如果你从事高频交易，对交易时效性有较高的要求，可以灵活设置recvWindow以达到你的要求。
+**关于交易时效性** 互联网状况并不100%可靠，不可完全依赖,因此你的程序本地到AlphaX服务器的时延会有抖动. 这是我们设置recvWindow的目的所在，如果你从事高频交易，对交易时效性有较高的要求，可以灵活设置recvWindow以达到你的要求。
 <aside class="notice">
 不推荐使用5秒以上的recvWindow
 </aside>
@@ -113,7 +113,7 @@ $ echo -n "symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=
 ``` bash
 curl 调用:
 (HMAC SHA256)
-$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.toobit.com/api/v1/futures/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
+$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.alphax.com/api/v1/futures/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
 
 ```
 - **queryString**
@@ -140,7 +140,7 @@ $ echo -n "symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=
 ``` bash
 curl 调用:
 (HMAC SHA256)
-$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.toobit.com/api/v1/spot/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
+$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.alphax.com/api/v1/spot/order' -d 'symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC&quantity=1&price=400&recvWindow=100000&timestamp=1668481902307&signature=8420e499e71cce4a00946db16543198b6bcae01791bdb75a06b5a7098b156468'
 ```
 - **requestBody**
 symbol=BTCUSDT <br>
@@ -169,7 +169,7 @@ $ echo -n "symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTCquantity=1&price=4
 ``` bash
 curl 调用:
 (HMAC SHA256)
-$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.toobit.com/api/v1/spot/order?symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC' -d 'quantity=1&price=400&recvWindow=10000000&timestamp=1668481902307&signature=59ef0b2085ebb99cca5b6445c202d99add17be2d5d1861c0f4aa17bc785ac4d5'
+$ curl -H "X-BB-APIKEY: SRQGN9M8Sr87nbfKsaSxm33Y6CmGVtUu9Erz73g9vHFNn36VROOKSaWBQ8OSOtSq" -X POST 'https://api.alphax.com/api/v1/spot/order?symbol=BTCUSDT&side=SELL&type=LIMIT&timeInForce=GTC' -d 'quantity=1&price=400&recvWindow=10000000&timestamp=1668481902307&signature=59ef0b2085ebb99cca5b6445c202d99add17be2d5d1861c0f4aa17bc785ac4d5'
 
 ```
 
@@ -1241,7 +1241,7 @@ symbol的k线/烛线图数据,K线会根据开盘时间而辨别。
 
 ## 实时订阅/取消数据流
 
-- Base Url: **wss://stream.toobit.com**
+- Base Url: **wss://stream.alphax.com**
 - 以下数据可以通过websocket发送以实现订阅或取消订阅数据流。示例如下。
 - 直接访问时URL格式为  wss://#HOST/quote/ws/v1
 
@@ -2673,7 +2673,7 @@ curl  -H "Content-Type:application/json"
 
 公共WSS说明
 
-- Base Url: **wss://stream.toobit.com**
+- Base Url: **wss://stream.alphax.com**
 - 对listenKey执行PUT将使其有效期延长60分钟。
 - 对listenKey执行DELETE将关闭流。
 - 用户信息流可通过 `/api/v1/ws/<listenKey>`访问   (例如`wss://#HOST/api/v1/ws/<listenKey>`)
